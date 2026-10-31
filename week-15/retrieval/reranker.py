@@ -1,0 +1,60 @@
+"""
+reranker.py
+
+확장 기능
+
+BAAI/bge-reranker-base
+"""
+
+from sentence_transformers import (
+    CrossEncoder
+)
+
+
+class Reranker:
+
+    def __init__(self):
+
+        self.model = CrossEncoder(
+            "BAAI/bge-reranker-base"
+        )
+
+    def rerank(
+
+        self,
+        query,
+        docs,
+        top_k=5
+    ):
+
+        pairs = [
+
+            (
+                query,
+                doc.page_content
+            )
+
+            for doc in docs
+        ]
+
+        scores = self.model.predict(
+            pairs
+        )
+
+        ranked = sorted(
+
+            zip(scores, docs),
+
+            key=lambda x: x[0],
+
+            reverse=True
+        )
+
+        return [
+
+            doc
+
+            for _, doc
+
+            in ranked[:top_k]
+        ]

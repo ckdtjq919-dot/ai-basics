@@ -1,0 +1,11 @@
+movie_id,title,year,director
+M001,Inception,2010,Christopher Nolan
+M002,Interstellar,2014,Christopher Nolan
+M003,Tenet,2020,Christopher Nolan
+M004,Dunkirk,2017,Christopher Nolan
+M005,Blade Runner 2049,2017,Denis Villeneuve
+M006,Dune,2021,Denis Villeneuve
+M007,Titanic,1997,James Cameron
+M008,Avatar,2009,James Cameron
+M009,The Martian,2015,Ridley Scott
+M010,Arrival,2016,Denis Villeneuve

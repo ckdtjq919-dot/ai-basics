@@ -1,0 +1,29 @@
+# Secrets & Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Large media files (>100MB rejected by GitHub)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.zip
+*.tar.gz
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
